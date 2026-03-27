@@ -1,0 +1,10 @@
+<Window x:Class="MemberData.Views.MemberDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Member Dialog" Height="350" Width="525">
+    <Grid>
+        <TextBox Name="NameTextBox" PlaceholderText="Name" />
+        <TextBox Name="EmailTextBox" PlaceholderText="Email" />
+        <Button Name="SaveButton" Content="Save" />
+    </Grid>
+</Window>
