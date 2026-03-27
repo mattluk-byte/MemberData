@@ -1,0 +1,21 @@
+<Window x:Class="ClubApp.Views.FeeView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="會費項目" Height="450" Width="700">
+  <DockPanel>
+    <StackPanel Orientation="Horizontal" DockPanel.Dock="Top" Margin="6">
+      <Button Content="新增" Command="{Binding AddCommand}" Margin="4"/>
+      <Button Content="編輯" Command="{Binding EditCommand}" Margin="4"/>
+      <Button Content="刪除" Command="{Binding DeleteCommand}" Margin="4"/>
+      <Button Content="重新整理" Command="{Binding RefreshCommand}" Margin="4"/>
+    </StackPanel>
+    <DataGrid ItemsSource="{Binding FeeItems}" SelectedItem="{Binding SelectedFee}" AutoGenerateColumns="False" Margin="6">
+      <DataGrid.Columns>
+        <DataGridTextColumn Header="代碼" Binding="{Binding Code}" Width="120"/>
+        <DataGridTextColumn Header="名稱" Binding="{Binding Name}" />
+        <DataGridTextColumn Header="金額" Binding="{Binding Amount}" />
+        <DataGridCheckBoxColumn Header="啟用" Binding="{Binding IsActive}" Width="70"/>
+      </DataGrid.Columns>
+    </DataGrid>
+  </DockPanel>
+</Window>

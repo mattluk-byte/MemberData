@@ -1,0 +1,23 @@
+// Add these registrations into ConfigureServices
+services.AddScoped<IFeeRepository, FeeRepository>();
+services.AddScoped<IAccountingRepository, AccountingRepository>();
+services.AddScoped<IActivityRepository, ActivityRepository>();
+services.AddScoped<IServiceRepository, ServiceRepository>();
+
+services.AddScoped<IFeeService, FeeService>();
+services.AddScoped<IAccountingService, AccountingService>();
+services.AddScoped<IActivityService, ActivityService>();
+services.AddScoped<IServiceService, ServiceService>();
+
+services.AddTransient<FeeListViewModel>();
+services.AddTransient<FeeEditViewModel>();
+services.AddTransient<AccountingViewModel>();
+services.AddTransient<ActivityListViewModel>();
+services.AddTransient<ActivityEditViewModel>();
+services.AddTransient<ServiceListViewModel>();
+services.AddTransient<ServiceEditViewModel>();
+
+services.AddTransient<Views.FeeEditDialog>();
+services.AddTransient<Views.ActivityEditDialog>();
+services.AddTransient<Views.ServiceEditDialog>();
+services.AddTransient<Views.AccountingEditDialog>();
